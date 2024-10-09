@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package urlshortnerapiv1;
+
+option go_package = "github.com/mhmdgol/urlshortnerapiv1";
+
+service URLShortnerService {
+    rpc ShortURL(ShortURLRequest) returns (ShortURLResponse);
+}
+
+message ShortURLRequest {
+    string url = 1;
+}
+
+message ShortURLResponse {
+    string shorten_url = 1;
+}
